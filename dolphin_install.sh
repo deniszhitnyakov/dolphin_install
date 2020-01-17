@@ -36,7 +36,7 @@ read -p 'Введите домен: ' domain
 
 echo 'Запускаю установку DOLPHIN'
 rm -f dolphin_install.php
-curl https://panel.dolphin.ru.com/97384261b8bbf966df16e5ad509922db/dolphin_install >> dolphin_install.php
+curl https://raw.githubusercontent.com/deniszhitnyakov/dolphin_install/master/dolphin_install.php >> dolphin_install.php
 php dolphin_install.php $lic $domain
 
 echo 'Настраиваю Apache'
