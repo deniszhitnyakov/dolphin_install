@@ -71,6 +71,13 @@ echo 'Настраиваю права доступа'
 chown -R www-data:www-data /var/www/html
 find /var/www/html -type d -exec chmod 755 {} \;
 find /var/www/html -type f -exec chmod 644 {} \;
+mkdir /var/www/html/uploads/cabsRefreshListJobs
+mkdir /var/www/html/uploads/fbCabStatRefreshJobs
+chown www-data:www-data /var/www/html/uploads/cabsRefreshListJobs
+chown www-data:www-data /var/www/html/uploads/fbCabStatRefreshJobs
+chmod -R 755 /var/www/html/uploads/cabsRefreshListJobs
+chmod -R 755 /var/www/html/uploads/fbCabStatRefreshJobs
+chmod -R 777 /var/www/html/uploads/fb_ads_thumbs
 
 echo 'Очищаю ненужное'
 rm -f /var/www/html/db.sql
